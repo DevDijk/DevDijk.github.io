@@ -85,7 +85,7 @@ function waitForElm(selector) {
   }
 
   // Initialize scripts that require a loaded page
-  $(window).load(function () {
+  waitForElm("#header").then(() => {
     let plugins = {
       bootstrapTooltip: $("[data-bs-toggle='tooltip']"),
       bootstrapModalDialog: $(".modal"),
